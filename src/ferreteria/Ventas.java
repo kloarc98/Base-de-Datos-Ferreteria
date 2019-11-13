@@ -34,7 +34,6 @@ public class Ventas extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         subtotal = new javax.swing.JLabel();
@@ -55,6 +54,7 @@ public class Ventas extends javax.swing.JFrame {
         costouni = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -86,7 +86,6 @@ public class Ventas extends javax.swing.JFrame {
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 108, 192, -1));
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 205, -1));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(758, 105, 176, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("IVA");
@@ -207,6 +206,7 @@ public class Ventas extends javax.swing.JFrame {
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/barrido-de-limpieza-para-pisos.png"))); // NOI18N
         jButton3.setText("LIMPIAR");
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 510, 130, 40));
+        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 140, -1));
 
         jMenu1.setText("Usuarios");
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {

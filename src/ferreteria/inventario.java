@@ -16,12 +16,14 @@ import java.awt.event.*;
  * @author Kevin Loarca
  */
 public class inventario extends javax.swing.JFrame {
-
+    conexion conexionn = new conexion();
     /**
      * Creates new form inventario
      */
     public inventario() {
         initComponents();
+        conexionn.consultarcat(combocategoria);
+        
     }
 
     /**
@@ -47,7 +49,7 @@ public class inventario extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox();
         jComboBox2 = new javax.swing.JComboBox();
-        jComboBox3 = new javax.swing.JComboBox();
+        combocategoria = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
@@ -110,8 +112,13 @@ public class inventario extends javax.swing.JFrame {
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 145, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 145, -1));
+        combocategoria.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combocategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combocategoriaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(combocategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 145, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/registrarse.png"))); // NOI18N
@@ -227,6 +234,10 @@ public class inventario extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenu5MouseClicked
 
+    private void combocategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combocategoriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_combocategoriaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -263,12 +274,12 @@ public class inventario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox combocategoria;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

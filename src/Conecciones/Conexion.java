@@ -1,6 +1,7 @@
 package Conecciones;
 
 import java.sql.*;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 public class Conexion {
     private static Connection conn;
@@ -33,4 +34,16 @@ public class Conexion {
         }
     }
 
+    public ResultSet consulta(String sql){
+        ResultSet res = null;
+        try{
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            res= pstm.executeQuery();
+        }catch(SQLException e){
+            System.err.println("Error Consulta :"+ e.getMessage());
+        }
+        return res;
+    }
+    
+   
 }
